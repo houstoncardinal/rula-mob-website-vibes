@@ -3,47 +3,49 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Luxury Corporate Design System */
-/* High-end red, black and white color palette */
+/* Futuristic High-Tech Design System */
+/* Ultra-modern color palette with technological precision */
 
 @layer base {
   :root {
-    --background: 0 0% 98%;     /* Pure white background */
-    --foreground: 0 0% 3%;      /* Deep black text */
+    --background: 0 0% 4%;      /* Deep space black */
+    --foreground: 0 0% 96%;     /* Pure white text */
 
-    --card: 0 0% 100%;          /* Pure white cards */
-    --card-foreground: 0 0% 3%;
+    --card: 0 0% 8%;            /* Dark glass cards */
+    --card-foreground: 0 0% 96%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 3%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 96%;
 
-    --primary: 0 84% 47%;       /* Luxury crimson red */
+    --primary: 0 84% 55%;       /* Electric crimson */
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 0 0% 9%;       /* Sophisticated black */
+    --secondary: 220 100% 65%;  /* Electric blue */
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 0 0% 96%;          /* Light gray */
-    --muted-foreground: 0 0% 45%;
+    --muted: 0 0% 12%;          /* Dark muted */
+    --muted-foreground: 0 0% 65%;
 
-    --accent: 0 84% 47%;        /* Luxury red accent */
+    --accent: 280 100% 70%;     /* Neon purple */
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 0 0% 90%;         /* Light gray border */
-    --input: 0 0% 96%;          /* Light input background */
-    --ring: 0 84% 47%;          /* Red focus ring */
+    --border: 0 0% 16%;         /* Subtle border */
+    --input: 0 0% 12%;          /* Dark input */
+    --ring: 0 84% 55%;          /* Red focus ring */
 
-    --radius: 0.375rem;
+    --radius: 0.75rem;
 
-    /* Custom luxury colors */
-    --luxury-red: 0 84% 47%;
-    --luxury-crimson: 0 73% 37%;
-    --luxury-black: 0 0% 9%;
-    --luxury-platinum: 0 0% 96%;
-    --luxury-charcoal: 0 0% 20%;
+    /* Futuristic tech colors */
+    --neon-red: 0 84% 55%;
+    --neon-blue: 220 100% 65%;
+    --neon-purple: 280 100% 70%;
+    --neon-cyan: 180 100% 50%;
+    --glass-white: 0 0% 100%;
+    --space-black: 0 0% 4%;
+    --tech-gray: 0 0% 16%;
   }
 
   * {
@@ -54,33 +56,90 @@
     @apply bg-background text-foreground font-sans;
   }
 
-  /* Custom luxury utility classes */
-  .luxury-gradient {
-    background: linear-gradient(135deg, hsl(var(--luxury-red)) 0%, hsl(var(--luxury-crimson)) 100%);
+  /* Futuristic utility classes */
+  .tech-gradient {
+    background: linear-gradient(135deg, hsl(var(--neon-red)) 0%, hsl(var(--neon-purple)) 100%);
   }
 
-  .luxury-gradient-reverse {
-    background: linear-gradient(135deg, hsl(var(--luxury-black)) 0%, hsl(var(--luxury-charcoal)) 100%);
+  .cyber-gradient {
+    background: linear-gradient(135deg, hsl(var(--neon-blue)) 0%, hsl(var(--neon-cyan)) 100%);
   }
 
   .text-gradient {
-    background: linear-gradient(135deg, hsl(var(--luxury-red)), hsl(var(--luxury-black)));
+    background: linear-gradient(135deg, hsl(var(--neon-red)), hsl(var(--neon-blue)));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
-  .luxury-shadow {
-    box-shadow: 0 10px 40px -10px hsl(var(--luxury-red) / 0.25);
+  .neon-glow {
+    box-shadow: 
+      0 0 20px hsl(var(--neon-red) / 0.5),
+      0 0 40px hsl(var(--neon-red) / 0.3),
+      0 0 60px hsl(var(--neon-red) / 0.1);
   }
 
-  .premium-glow {
-    box-shadow: 0 0 30px hsl(var(--luxury-red) / 0.3);
+  .cyber-glow {
+    box-shadow: 
+      0 0 20px hsl(var(--neon-blue) / 0.5),
+      0 0 40px hsl(var(--neon-blue) / 0.3);
   }
 
-  .glass-effect {
-    background: rgba(255, 255, 255, 0.9);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+  .glass-morphism {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .tech-border {
+    border: 1px solid;
+    border-image: linear-gradient(135deg, hsl(var(--neon-red)), hsl(var(--neon-blue))) 1;
+  }
+
+  .hover-lift {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: 
+      0 20px 40px rgba(0, 0, 0, 0.4),
+      0 0 30px hsl(var(--neon-red) / 0.3);
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite alternate;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+
+  @keyframes pulse-glow {
+    0% { 
+      box-shadow: 0 0 20px hsl(var(--neon-red) / 0.3);
+    }
+    100% { 
+      box-shadow: 
+        0 0 30px hsl(var(--neon-red) / 0.6),
+        0 0 60px hsl(var(--neon-red) / 0.4);
+    }
+  }
+
+  /* Typography enhancements */
+  .font-cyber {
+    font-family: 'Orbitron', 'Space Grotesk', monospace;
+    letter-spacing: 0.05em;
+  }
+
+  .text-glow {
+    text-shadow: 
+      0 0 10px hsl(var(--neon-red) / 0.5),
+      0 0 20px hsl(var(--neon-red) / 0.3);
   }
 }
