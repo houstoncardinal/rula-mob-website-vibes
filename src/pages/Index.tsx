@@ -35,16 +35,16 @@ const Index = () => {
       <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <div className="text-2xl font-bold text-gradient">
+            <div className="text-2xl font-bold tracking-tight text-gradient">
               RIPP THA RULA
             </div>
-            <div className="hidden md:flex space-x-6">
-              <a href="#home" className="hover:text-primary transition-colors">Home</a>
-              <a href="#about" className="hover:text-primary transition-colors">About</a>
-              <a href="#music" className="hover:text-primary transition-colors">Music</a>
-              <a href="#videos" className="hover:text-primary transition-colors">Videos</a>
-              <a href="#shows" className="hover:text-primary transition-colors">Shows</a>
-              <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
+            <div className="hidden md:flex space-x-8">
+              <a href="#home" className="font-medium hover:text-primary transition-colors uppercase tracking-wide text-sm">Home</a>
+              <a href="#about" className="font-medium hover:text-primary transition-colors uppercase tracking-wide text-sm">About</a>
+              <a href="#music" className="font-medium hover:text-primary transition-colors uppercase tracking-wide text-sm">Music</a>
+              <a href="#videos" className="font-medium hover:text-primary transition-colors uppercase tracking-wide text-sm">Videos</a>
+              <a href="#shows" className="font-medium hover:text-primary transition-colors uppercase tracking-wide text-sm">Shows</a>
+              <a href="#contact" className="font-medium hover:text-primary transition-colors uppercase tracking-wide text-sm">Contact</a>
             </div>
           </div>
         </div>
@@ -52,35 +52,36 @@ const Index = () => {
 
       {/* Hero Section */}
       <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-background via-background/90 to-primary/20"></div>
-        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-          <div className="mb-6">
-            <Badge className="mb-4 bg-primary/20 text-primary border-primary">
+        <div className="absolute inset-0 bg-gradient-to-br from-background to-muted"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(220,38,127,0.1)_0%,transparent_50%)]"></div>
+        <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
+          <div className="mb-8">
+            <Badge className="mb-6 glass-effect text-primary border-primary/20 px-4 py-2 text-sm font-medium tracking-wide">
               <MapPin className="w-4 h-4 mr-2" />
-              Houston, TX
+              HOUSTON, TEXAS
             </Badge>
           </div>
           
-          <h1 className="text-6xl md:text-8xl font-black mb-6 text-gradient leading-tight">
+          <h1 className="text-7xl md:text-9xl font-black mb-8 text-gradient leading-none tracking-tight">
             RIPP THA RULA
           </h1>
           
-          <div className="text-xl md:text-3xl font-bold mb-8 text-secondary">
-            The Voice of the Next Swisha House Wave
+          <div className="text-2xl md:text-4xl font-light mb-12 text-muted-foreground tracking-wide">
+            LUXURY • AUTHENTICITY • EXCELLENCE
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button size="lg" className="houston-gradient hover:opacity-90 text-white font-bold px-8 py-4 text-lg glow-purple">
-              <Play className="w-6 h-6 mr-2" />
-              Listen Now
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
+            <Button size="lg" className="luxury-gradient hover:scale-105 transition-transform text-white font-semibold px-10 py-4 text-lg luxury-shadow tracking-wide">
+              <Play className="w-6 h-6 mr-3" />
+              EXPERIENCE NOW
             </Button>
-            <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-white px-8 py-4 text-lg">
-              <Video className="w-6 h-6 mr-2" />
-              Watch Latest Video
+            <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-white px-10 py-4 text-lg font-semibold tracking-wide">
+              <Video className="w-6 h-6 mr-3" />
+              WATCH PORTFOLIO
             </Button>
-            <Button variant="outline" size="lg" className="border-secondary text-secondary hover:bg-secondary hover:text-black px-8 py-4 text-lg">
-              <Mic className="w-6 h-6 mr-2" />
-              Book Ripp
+            <Button variant="outline" size="lg" className="border-secondary text-secondary hover:bg-secondary hover:text-white px-10 py-4 text-lg font-semibold tracking-wide">
+              <Mic className="w-6 h-6 mr-3" />
+              BOOK CONSULTATION
             </Button>
           </div>
 
@@ -98,9 +99,11 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Floating elements for visual interest */}
-        <div className="absolute top-20 left-10 w-20 h-20 bg-primary/20 rounded-full blur-xl"></div>
-        <div className="absolute bottom-20 right-10 w-32 h-32 bg-secondary/20 rounded-full blur-2xl"></div>
+        {/* Luxury floating elements */}
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-secondary/5 rounded-full blur-2xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 right-1/3 w-1 h-32 bg-gradient-to-b from-primary/30 to-transparent"></div>
+        <div className="absolute bottom-1/3 left-1/3 w-1 h-24 bg-gradient-to-t from-primary/30 to-transparent"></div>
       </section>
 
       {/* About Section */}
@@ -164,10 +167,10 @@ const Index = () => {
                 <div className="text-4xl font-black mb-4 text-gradient">
                   "RIP'n & Runnin"
                 </div>
-                <Button className="houston-gradient text-white font-bold">
-                  <Play className="w-5 h-5 mr-2" />
-                  Play Now
-                </Button>
+            <Button className="luxury-gradient text-white font-semibold px-8 py-3 luxury-shadow hover:scale-105 transition-transform">
+              <Play className="w-5 h-5 mr-2" />
+              EXPERIENCE NOW
+            </Button>
               </CardContent>
             </Card>
           </div>
@@ -279,27 +282,27 @@ const Index = () => {
       </section>
 
       {/* Newsletter Section */}
-      <section className="py-20 px-4 houston-gradient">
-        <div className="container mx-auto max-w-2xl text-center">
-          <h2 className="text-4xl md:text-5xl font-black mb-6 text-white">
-            JOIN THE RULA MOB
+      <section className="py-24 px-4 luxury-gradient">
+        <div className="container mx-auto max-w-3xl text-center">
+          <h2 className="text-5xl md:text-6xl font-light mb-8 text-white tracking-wide">
+            EXCLUSIVE ACCESS
           </h2>
-          <p className="text-xl mb-8 text-white/90">
-            Get new drops first, exclusive content, and behind-the-scenes access
+          <p className="text-xl mb-12 text-white/90 font-light tracking-wide max-w-2xl mx-auto">
+            Join our premium community for first access to releases, exclusive content, and behind-the-scenes experiences
           </p>
           
-          <form onSubmit={handleNewsletterSignup} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+          <form onSubmit={handleNewsletterSignup} className="flex flex-col sm:flex-row gap-6 max-w-lg mx-auto">
             <Input
               type="email"
-              placeholder="Enter your email"
+              placeholder="Enter your email address"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="bg-white/20 border-white/30 text-white placeholder:text-white/70"
+              className="glass-effect border-white/30 text-foreground placeholder:text-muted-foreground px-6 py-4 text-lg"
               required
             />
-            <Button type="submit" className="bg-white text-primary hover:bg-white/90 font-bold">
+            <Button type="submit" className="bg-white text-primary hover:bg-white/90 font-semibold px-8 py-4 text-lg tracking-wide">
               <Users className="w-5 h-5 mr-2" />
-              Join Now
+              JOIN NOW
             </Button>
           </form>
         </div>
@@ -331,9 +334,9 @@ const Index = () => {
               </div>
               
               <div className="mt-8">
-                <Button className="houston-gradient text-white font-bold">
+                <Button className="luxury-gradient text-white font-semibold px-8 py-3 luxury-shadow hover:scale-105 transition-transform">
                   <Mail className="w-5 h-5 mr-2" />
-                  Contact Management
+                  CONTACT MANAGEMENT
                 </Button>
               </div>
             </div>
